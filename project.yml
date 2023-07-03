@@ -1,5 +1,5 @@
 settings:
-  name: "Product Name"
+  name: "BlueXP backup and recovery for VMs"
   internal:
     pdf_enabled: true
   prod:
@@ -8,5 +8,15 @@ settings:
 
 sidebar: 
   entries:
+  - title: Release notes
+    url: /release-notes.html
+  - title: What’s new in this release
+    url: /whats-new.html
+  - title: BlueXP backup and recovery for virtual machines on Amazon FSx
+    url: /concept-bluexp-backup-and-recovery-for-virtual-machines-on-amazon-fsx.html
+  - title: Unsupported workflows
+    url: /concept-unsupported-workflows.html
+  - title: Requirements and considerations
+    url: /reference-requirements-and-considerations.html
   - title: Legal notices
     url: /legal-notices.html
