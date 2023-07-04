@@ -18,4 +18,4 @@ You can protect data on your virtual machines by using BlueXP backup and recover
 
 This solution is specifically for Virtual Machines and Datastores on VMware Cloud on AWS and Amazon FSx for NetApp ONTAP.
 
-link:concept-bluexp-backup-and-recovery-for-virtual-machines-on-amazon-fsx.adoc.html[BlueXP backup and recovery for virtual machines on Amazon FSx]
+link:concept-bluexp-backup-and-recovery-for-virtual-machines-on-amazon-fsx.html[BlueXP backup and recovery for virtual machines on Amazon FSx]
