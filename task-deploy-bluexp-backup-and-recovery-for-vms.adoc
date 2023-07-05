@@ -40,7 +40,7 @@ For IPv6 HTML web clients, you must use either Chrome or Firefox.
 +
 . Log in to the *VMware vCenter Single Sign-On page*.
 . On the Navigator pane, right-click any inventory object that is a valid parent object of a virtual machine, such as a datacenter, cluster, or host, and select *Deploy OVF Template* to start the VMware deploy wizard.
-. Extract the `.tar` file, which contains the `.ova` file onto your local system. On the *Select an OVF template* page, specify the location of the `.ova`file inside the `.tar` extracted folder.
+. Extract the `.tar` file, which contains the `.ova` file onto your local system. On the *Select an OVF template* page, specify the location of the `.ova` file inside the `.tar` extracted folder.
 . Click *Next*.
 . On the *Select a name and folder* page, enter a unique name for the VM or vApp, and select a deployment location, and then click *Next*.
 +
