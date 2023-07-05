@@ -1,0 +1,63 @@
+---
+permalink: task-restore-virtual-machines-from-amazon-fsx.html
+sidebar: sidebar
+keywords: restore, virtual machines, amazon fsx
+summary: 'When you restore a Virtual Machine, you can overwrite the existing content with the backup copy that you select, or you can make a copy of the Virtual Machine.'
+---
+= Restore Virtual Machines from Amazon FSx
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you restore a Virtual Machine, you can overwrite the existing content with the backup copy that you select, or you can make a copy of the Virtual Machine.
+
+.Before you begin
+* A backup must exist.
++
+You must have created a backup of the Virtual Machine using BlueXP backup and recovery for VMs before you can restore the Virtual Machine.
++
+[NOTE]
+====
+Restore operations cannot finish successfully if there are Snapshot copies of the Virtual Machine that were performed by software other than BlueXP backup and recovery for VMs.
+====
++
+* The Virtual Machine must not be in transit.
++
+The Virtual Machine that you want to restore must not be in a state of vMotion or Storage vMotion.
+* HA configuration errors
++
+Ensure there are no HA configuration errors displayed on the vCenter ESXi Host Summary screen before restoring backups to a different location.
+
+.About this task
+* Virtual Machine is unregistered and registered again.
++
+The restore operation for Virtual Machines unregisters the original Virtual Machine, restores the Virtual Machine from a backup Snapshot copy, and registers the restored Virtual Machine with the same name and configuration on the same ESXi server. You must manually add the Virtual Machines to resource groups after the restore.
+* Restoring datastores
++
+You cannot restore a datastore, but you can restore any Virtual Machine in the datastore.
+* VMware consistency snapshot failures for a Virtual Machine.
++
+Even if a VMware consistency snapshot for a Virtual Machine fails, the Virtual Machine is nevertheless backed up. You can view the entities contained in the backup copy in the Restore wizard and use it for restore operations.
+
+.Steps
+. In the VMware vSphere web client GUI, click *Menu* in the toolbar, click *Inventory* and then select *Virtual Machines and Templates*.
+. In the left Navigator pane, right-click a *Virtual Machine*, then select *NetApp Cloud Backup* in the drop-down list, and then select *Restore* to start the wizard.
+.  In the *Restore* wizard, on the *Select Backup* page, select the backup Snapshot copy that you want to restore.
++
+You can search for a specific backup name or a partial backup name, or you can filter the backup list by clicking the filter icon and selecting a date and time range, selecting whether you want backups that contain VMware Snapshots, whether you want mounted backups, and the location. Click OK to return to the wizard.
+. On the *Select Scope* page, select *Entire Virtual Machine* in the *Restore scope* field, then select the restore location, and then enter the destination ESXi information where the backup should be mounted.
++
+When restoring partial backups, the restore operation skips the *Select Scope* page.
+. Enable *Restart VM* checkbox if you want the Virtual Machine to be powered on after the restore operation.
+. On the *Select Location* page, select the location for the restored datastore.
+. Review the *Summary* page and then click Finish.
+. Optional: Monitor the operation progress by clicking Recent Tasks at the bottom of the screen.
+
+.After you finish
+* Add restored Virtual Machines to resource groups.
++
+Although the Virtual Machines are restored, they are not automatically added to their former resource groups. Therefore, you must manually add the restored Virtual Machines to the appropriate resource groups.
+
+
+
+

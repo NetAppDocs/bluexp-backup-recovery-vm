@@ -11,4 +11,88 @@ summary: 'To protect VMs, datastores, and application-consistent databases on vi
 [.lead]
 To protect VMs, datastores, and application-consistent databases on virtualized machines, you must deploy BlueXP backup and recovery for VMs.
 
-In progress
+.Before you begin
+++ ++
+[NOTE]
+====
+The OVA deployment is supported in VMware vCenter 8.0 and above.
+====
+* You must have read the deployment requirements.
+* You must be running a supported version of VMC on AWS.
+* You must have configured and set up your VMC on AWS environment.
+* You must have set up an ESXi host for BlueXP backup and recovery for VMs.
+* You must have downloaded BlueXP backup and recovery for VMs.tar file.
+* You must have the login authentication details for your VMC on AWS instance.
+* You must have a certificate with valid Public and Private Key files. For more information, see articles under Storage Certificate Management section.
+* You must have logged out of and closed all browser sessions of vSphere client and deleted the browser cache to avoid any browser cache issue during the deployment of BlueXP backup and recovery for VMs.
+* You must have enabled Transport Layer Security (TLS) in vCenter. Refer to the VMware documentation.
+
+Deploy BlueXP backup and recovery for VMs in the same time zone as the vCenter. 
+
+.Steps
+. For VMware vCenter 7.0.3 and later versions, follow the steps in Download the Open Virtual Appliance (OVA) section to import the certificates to vCenter.
+. In your browser, navigate to VMware vSphere vCenter.
++
+[NOTE]
+====
+For IPv6 HTML web clients, you must use either Chrome or Firefox.
+====
++
+. Log in to the *VMware vCenter Single Sign-On page*.
+. On the Navigator pane, right-click any inventory object that is a valid parent object of a virtual machine, such as a datacenter, cluster, or host, and select *Deploy OVF Template* to start the VMware deploy wizard.
+. Extract the .tar file, which contains the .ova file onto your local system. On the *Select an OVF template* page, specify the location of the .ova file inside the .tar extracted folder.
+. Click *Next*.
+. On the *Select a name and folder* page, enter a unique name for the VM or vApp, and select a deployment location, and then click *Next*.
++
+This step specifies where to import the .ova file into vCenter. The default name for the VM is the same as the name of the selected .ova file. If you change the default name, choose a name that is unique within each VMC on AWS VM folder.
++
+The default deployment location for the VM is the inventory object where you started the wizard.
+. On the *Select a resource* page, select the resource where you want to run the deployed VM template, and click *Next*.
+. On the *Review details* page, verify the .ova template details and click *Next*.
+. On the *License agreements* page, select the checkbox for *I accept all license agreements*.
+. On the *Select storage* page, define where and how to store the files for the deployed OVF template.
+.. Select the disk format for the VMDKs.
+.. Select a VM Storage Policy.
+This option is available only if storage policies are enabled on the destination resource.
+.. Select a datastore to store the deployed OVA template.
+The configuration file and virtual disk files are stored on the datastore.
+Select a datastore large enough to accommodate the virtual machine or vApp and all associated virtual disk files.
+. On the *Select networks* page, do the following:
+.. Select a source network and map it to a destination network.
+The Source Network column lists all networks that are defined in the OVA template.
+.. In the *IP Allocation Settings* section, select the required IP protocol and then click *Next*.
+BlueXP backup and recovery for VMs supports one network interface. If you need multiple network adapters, you must set that up manually. 
+. On the *Customize template* page, do the following:
+.. In the *Register to existing vCenter* section, enter the vCenter name and the vCenter credentials of the virtual appliance.
+In the *vCenter username* field, enter the username in the format domain\username.
+.. In the *Create BlueXP backup and recovery for VMs credentials* section, enter the local credentials.
++
+In the *Username* field, enter the local username; do not include the domain details.
++
+[IMPORTANT]
+====
+Make a note of the username and password that you specify. You need to use these credentials if you want to modify BlueXP backup and recovery for VMs configuration later.
+====
++
+.. Enter credentials for the maint user.
+.. In *Setup Network Properties*, enter the host name.
+...	In *Setup IPv4 Network Properties* section, enter the network information such as IPv4 address, IPv4 Netmask, IPv4 Gateway, IPv4 Primary DNS, IPv4 Secondary DNS, and IPv4 Search Domains.
+...	In *Setup IPv6 Network Properties* section, enter the network information such as the IPv6 address, IPv6 Netmask, IPv6 Gateway, IPv6 Primary DNS, IPv6 Secondary DNS, and IPv6 Search Domains. 
++
+Select the IPv4 or IPv6 fields, or both, if appropriate. If you are using both IPv4 and IPv6, then you need to specify the Primary DNS for only one of them.
++
+[IMPORTANT]
+====
+You can skip these steps and leave the entries blank in the Setup Network Properties section, if you want to proceed with DHCP as your network configuration.
+====
++
+.. In *Setup Date and Time*, select the time zone where the vCenter is located.
+. On the *Ready to complete* page, review the page and click *Finish*.
++
+All hosts must be configured with IP addresses (FQDN hostnames are not supported). The deploy operation does not validate your input before deploying.
++
+You can view the progress of the deployment from the Recent Tasks window while you wait for the OVF import and deployment tasks to finish.
++
+When BlueXP backup and recovery for VMs is successfully deployed, it is deployed as a Linux VM, registered with vCenter, and a VMware vSphere client is installed.
+. Navigate to the VM where BlueXP backup and recovery for VMs was deployed, then click the *Summary* tab, and then click the *Power On* box to start the virtual appliance.
+. While BlueXP backup and recovery for VMs is powering on, right-click the deployed BlueXP backup and recovery for VMs, select *Guest OS*, and then click *Install VMware tools*.
