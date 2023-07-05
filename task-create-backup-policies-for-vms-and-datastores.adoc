@@ -85,7 +85,7 @@ A maximum of 31 characters is allowed for Snapshot copy labels.
 ====
 |===
 +
-. Optional: In the Advanced fields, select the fields that are needed. The Advanced field details are listed in the following table.
+. *Optional*: In the Advanced fields, select the fields that are needed. The Advanced field details are listed in the following table.
 +
 [cols="50,50"*,options="header"]
 |===

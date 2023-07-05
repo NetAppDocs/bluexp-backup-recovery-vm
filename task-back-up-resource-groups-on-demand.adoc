@@ -5,6 +5,7 @@ keywords: back up, resource, groups, demand
 summary: 'Backup operations are performed on all the resources defined in a resource group. If a resource group has a policy attached and a schedule configured, then backups occur automatically according to the schedule.'
 ---
 = Back up resource groups on demand
+:experimental:
 :icons: font
 :imagesdir: ./media/
 
@@ -19,10 +20,10 @@ Backup operations are performed on all the resources defined in a resource group
 Do not start an on-demand backup job when a job to back up BlueXP backup and recovery for VMs MySQL database is already running. Use the maintenance console to see the configured backup schedule for the MySQL database.
 ====
 .Steps
-. In the left Navigator pane of the vCenter web client page, click *BlueXP backup and recovery for VMs > Resource Groups*, then select a resource group, and then click *Run Now* to start the backup.
+. In the left Navigator pane of the vCenter web client page, click menu:BlueXP backup and recovery for VMs[Resource Groups], then select a resource group, and then click *Run Now* to start the backup.
 +
 image:vSphere client_resource group.png[]
 +
 . If the resource group has multiple policies configured, then in the Backup Now dialog box, select the policy you want to use for this backup operation.
-. Click OK to start the backup.
+. Click *OK* to start the backup.
 . If the quiesce operation fails for any of the Virtual Machines in the backup, then the backup completes with a warning and is marked as not Virtual Machine consistent even if the selected policy has Virtual Machine consistency selected. In this case, it is possible that some of the Virtual Machines were successfully quiesced. In the job monitor, the failed Virtual Machine details will show the quiesce as failed.

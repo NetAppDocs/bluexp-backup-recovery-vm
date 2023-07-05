@@ -29,11 +29,11 @@ If you add a storage VM with a name that cannot resolve to the management LIF, t
 .Steps
 . In the left Navigator pane of the vSphere client, click *Storage Systems*.
 . On the Storage Systems page, click *Add*.
-
++
 image:vSphere client.png[]
-
++
 . In the *Add Storage System* wizard, enter the basic storage VM or cluster information.
 . Select the *Credentials* authentication method and log in as Amazon FSx administrator.
 . Click *Add*.
-+
+
 If you added a storage cluster, all storage VMs in that cluster are automatically added. Automatically added storage VMs (sometimes called “implicit” storage VMs) are displayed on the cluster summary page with a hyphen (-) instead of a username. Usernames are displayed only for explicit storage entities.

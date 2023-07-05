@@ -9,20 +9,21 @@ summary: "You need to be aware of several requirements and considerations before
 :imagesdir: ../media/
 
 [.lead]
-You need to be aware of several requirements and considerations before using BlueXP backup and recovery for VMs
+You need to be aware of several requirements and considerations before using BlueXP backup and recovery for VMs:
 
 * BlueXP backup and recovery for VMs is deployed as a Linux VM regardless of whether you use the plug-in to protect data on Windows systems or Linux systems.
 * You should deploy BlueXP backup and recovery for VMs on VMC on AWS.
-
++
 BlueXP backup and recovery for VMs and VMC should use the same timezone. Backup schedules are executed in the time zone in which BlueXP backup and recovery for VMs is deployed. VMC reports data in the time zone in which the VMC is located. Therefore, if BlueXP backup and recovery for VMs and VMC are in different time zones, data in BlueXP backup and recovery for VMs Dashboard might not be the same as the data in the reports.
 
 * You must not deploy BlueXP backup and recovery for VMs in a folder that has a name with special characters.
++
 The folder name should not contain the following special characters: $!@#%^&()_+{}';.,*?"<>|
 
 * You must deploy and register a separate, unique instance of BlueXP backup and recovery for VMs for each VMC on AWS.
 ** Each VMC on AWS should be paired with a separate instance of BlueXP Backup and Recovery for VMs.
 ** Each instance of BlueXP backup and recovery for VMs must be deployed as a separate Linux VM.
-
++
 For example, if you want to perform backups from six different instances of VMC on AWS, then you must deploy six BlueXP backup and recovery for VMs instances on six hosts and each VMC on AWS must be paired with a unique instance of BlueXP backup and recovery for VMs.
 
 

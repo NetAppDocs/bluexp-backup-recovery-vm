@@ -5,6 +5,7 @@ keywords: create, resource, groups
 summary: 'A resource group is the container for Virtual Machines and datastores that you want to protect.'
 ---
 = Create resource groups
+:experimental:
 :icons: font
 :imagesdir: ./media/
 
@@ -31,6 +32,7 @@ Although it is possible to create a resource group without a backup policy, you 
 * Compatibility checks
 +
 BlueXP backup and recovery for VMs performs compatibility checks when you create a resource group. Reasons for incompatibility might be:
+
 ** VMDKs are on unsupported storage.
 ** A shared PCI device is attached to a Virtual Machine.
 
@@ -42,8 +44,8 @@ image:Resource group.png[]
 +
 This is the easiest way to create a resource group. However, you can also create a resource group with one resource by performing one of the following:
 
-* To create a resource group for one Virtual Machine, click *Menu > Hosts and Clusters*, then right-click a Virtual Machine, then select BlueXP backup and recovery for VMs, and then click *Create*.
-* To create a resource group for one datastore, click *Menu > Hosts and Clusters*, then right-click a datastore, then select BlueXP backup and recovery for VMs, and then click *Create*.
+* To create a resource group for one Virtual Machine, click menu:Menu[Hosts and Clusters], then right-click a Virtual Machine, then select BlueXP backup and recovery for VMs, and then click *Create*.
+* To create a resource group for one datastore, click menu:Menu[Hosts and Clusters], then right-click a datastore, then select BlueXP backup and recovery for VMs, and then click *Create*.
 +
 . On the *General Info & Notification* page in the wizard, enter the required values.
 . On the *Resources* page, do the following:
