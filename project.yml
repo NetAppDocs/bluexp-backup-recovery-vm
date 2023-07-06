@@ -22,7 +22,7 @@ sidebar:
     entries:
       - title: Requirements and considerations
         url: /reference-requirements-and-considerations.html
-      - title: Download the Open Virtual Appliance (OVA)
+      - title: Download the OVA
         url: /task-download-the-open-virtual-appliance.html
       - title: Deploy BlueXP backup and recovery for VMs
         url: /task-deploy-bluexp-backup-and-recovery-for-vms.html
@@ -30,7 +30,7 @@ sidebar:
     entries:
       - title: Add storage
         url: /task-add-storage.html
-      - title: Create backup policies for VMs and datastores
+      - title: Create backup policies
         url: /task-create-backup-policies-for-vms-and-datastores.html
       - title: Create resource groups
         url: /task-create-resource-groups.html
