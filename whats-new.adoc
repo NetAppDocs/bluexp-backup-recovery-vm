@@ -2,9 +2,9 @@
 permalink: whats-new.html
 sidebar: sidebar
 keywords: 2-node switched Cisco 92300YC cluster switch migration
-summary: 'Learn what’s new in BlueXP backup and recovery for VMs.'
+summary: 'Learn what’s new with BlueXP backup and recovery for VMs.'
 ---
-= What’s new in this release
+= What’s new with BlueXP backup and recovery for VMs
 :icons: font
 :imagesdir: ../media/
 
