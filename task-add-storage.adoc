@@ -17,7 +17,6 @@ The ESXi server, BlueXP backup and recovery for VMs, and each vCenter must be sy
 .About this task
 BlueXP backup and recovery for VMs perform backup and restore operations on directly connected storage VMs and on storage VMs in a storage cluster.
 
-* For vCenters in linked mode, you must separately add storage systems to each vCenter. 
 * Names for storage VMs must resolve to management LIFs.
 +
 If you added etc host entries for storage VM names in BlueXP backup and recovery for VMs, you must verify that they are also resolvable from the virtual appliance.
