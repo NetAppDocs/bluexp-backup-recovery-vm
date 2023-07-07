@@ -16,6 +16,5 @@ BlueXP backup and recovery for VMs is a standalone virtual appliance (Open Virtu
 * VMware Cloud comes with a pre-defined “CloudAdmin” role. The CloudAdmin role has the necessary privileges to create and manage SDDC workloads and related objects such as storage policies, content libraries, vSphere tags, and resource pools.
 * You can restore VMs and VMDK to their current location (in-place restore).
 
-This document describes how to deploy and use BlueXP backup and recovery for VMs.
 
 
