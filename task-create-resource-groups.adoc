@@ -1,0 +1,115 @@
+---
+permalink: task-create-resource-groups.html
+sidebar: sidebar
+keywords: create, resource, groups
+summary: 'A resource group is the container for Virtual Machines and datastores that you want to protect.'
+---
+= Create resource groups
+:experimental:
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+A resource group is the container for Virtual Machines and datastores that you want to protect.
+
+For all resource groups, do not add Virtual Machines that are in an inaccessible state. Although it is possible to create a resource group that contains inaccessible Virtual Machines, backups for that resource group will fail.
+
+.About this task
+You can add or remove resources from a resource group at any time.
+
+* Backing up a single resource
++
+To back up a single resource (for example, a single Virtual Machine), you must create a resource group that contains that single resource.
+* Backing up multiple resources
++
+To back up multiple resources, you must create a resource group that contains multiple resources.
+* Optimizing Snapshot copies
++
+To optimize Snapshot copies, you should group the Virtual Machines and datastores that are associated with the same volume into one resource group.
+* Backup policies
++
+Although it is possible to create a resource group without a backup policy, you can only perform scheduled data protection operations when at least one policy is attached to the resource group. You can use an existing policy, or you can create a new policy while creating a resource group.
+* Compatibility checks
++
+BlueXP backup and recovery for VMs performs compatibility checks when you create a resource group. Reasons for incompatibility might be:
+
+** VMDKs are on unsupported storage.
+** A shared PCI device is attached to a Virtual Machine.
+
+.Steps
+. In the left Navigator pane of BlueXP backup and recovery for VMs, click *Resource Groups*.
+. On the *Resource Groups* page, click *Create* to start the wizard.
++
+image:Resource group.png[]
++
+This is the easiest way to create a resource group. However, you can also create a resource group with one resource by performing one of the following:
+
+* To create a resource group for one Virtual Machine, click menu:Menu[Hosts and Clusters], then right-click a Virtual Machine, then select BlueXP backup and recovery for VMs, and then click *Create*.
+* To create a resource group for one datastore, click menu:Menu[Hosts and Clusters], then right-click a datastore, then select BlueXP backup and recovery for VMs, and then click *Create*.
++
+. On the *General Info & Notification* page in the wizard, enter the required values.
+. On the *Resources* page, do the following:
++
+[cols="50,50"*,options="header"]
+|===
+| For this field…| Do this…
+a|
+Scope
+a|
+Select the type of resource you want to protect:
+
+* Datastores 
+* Virtual Machines 
+a|
+Datacenter
+a|
+Navigate to the Virtual Machines or datastores 
+a|
+Available entities
+a|
+Select the resources you want to protect, then click > to move your selections to the Selected entities list
+|===
++
+When you click *Next*, the system first checks that BlueXP backup and recovery for manages and is compatible with the storage on which the selected resources are located.
++
+If the message selected <resource-name> is not BlueXP backup and recovery for VMs compatible is displayed, then a selected resource is not compatible with BlueXP backup and recovery for VMs. 
++
+. On the *Spanning disks* page, select an option for Virtual Machines with multiple VMDKs across multiple datastores:
+* Always exclude all spanning datastores [This is the default for datastores.]
+* Always include all spanning datastores [This is the default for Virtual Machines.]
+* Manually select the spanning datastores to be included.
+. On the *Policies* page, select or create one or more backup policies, as shown in the following table:
++
+[cols="50,50"*,options="header"]
+|===
+| To use…| Do this…
+a|
+An existing policy
+a|
+Select one or more policies from the list.
+a|
+A new policy
+a|
+. Click *Create*.
+. Complete the New Backup Policy wizard to return to the Create Resource Group wizard.
+|===
++
+. On the *Schedules* page, configure the backup schedule for each selected policy.
++
+In the starting hour field, enter a date and time other than zero. The date must be in the format day/month/year. You must fill in each field. BlueXP backup and recovery for VMs creates schedules in the time zone in which BlueXP backup and recovery for VMs is deployed. You can modify the time zone by using BlueXP backup and recovery for VMs GUI.
++
+image:Schedules.png[]
++
+. Review the *summary*, and then click *Finish*.
++
+Before you click Finish, you can go back to any page in the wizard and change the information.
++
+After you click Finish, the new resource group is added to the resource groups list.
++
+[NOTE]
+====
+If the quiesce operation fails for any of the Virtual Machines in the backup, then the backup is marked as not Virtual Machine consistent even if the policy selected has Virtual Machine consistency selected. In this case, it is possible that some of the Virtual Machines were successfully quiesced.
+====
+
+
+

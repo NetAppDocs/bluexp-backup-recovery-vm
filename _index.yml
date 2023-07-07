@@ -1,9 +1,30 @@
 indexpage:
-  lead: # single paragraph, shown on the page
+  lead: The BlueXP backup and recovery service (Cloud Backup) provides efficient, secure, and cost-effective data protection for NetApp ONTAP data, Kubernetes persistent volumes, databases, and virtual machines, both on premises and in the cloud.
   tiles:
-    # one or more tile definitions for the page
-  - title: # short string (tile title)
-    links:
-      # one or more links on the tile
-      - title: # short string (link title)
-        url: # single file name or external URL
+    - title: Get started
+      links:
+        - title: Learn about BlueXP backup and recovery for VMs
+          url: concept-bluexp-backup-and-recovery-for-virtual-machines-on-amazon-fsx.html
+        - title: Unsupported workflows
+          url: concept-unsupported-workflows.html
+    - title: Deploy BlueXP backup and recovery for VMs
+      links:
+        - title: Download the OVA
+          url: task-download-the-open-virtual-appliance.html
+        - title: Deploy BlueXP backup and recovery for VMs
+          url: task-deploy-bluexp-backup-and-recovery-for-vms.html
+    - title: Use BlueXP backup and recovery for VMs 
+      links:
+        - title: Add storage
+          url: task-add-storage.html
+        - title: Create backup policies
+          url: task-create-backup-policies-for-vms-and-datastores.html
+        - title: Create resource groups
+          url: task-create-resource-groups.html
+        - title: Back up resource groups on demand
+          url: task-back-up-resource-groups-on-demand.html
+        - title: Restore Virtual Machines from Amazon FSx
+          url: task-restore-virtual-machines-from-amazon-fsx.html
+    - title: Blogs & community
+      links:
+      

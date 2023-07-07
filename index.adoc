@@ -2,10 +2,10 @@
 layout: landing-page
 sidebar: sidebar
 permalink: index.html
-# lead: Use only if indexpage.lead is not present in _index.yml
-summary: "summary, used for search results"
+summary: BlueXP backup and recovery for virtual machines on Amazon FSx.
 ---
-= replace with repository name
+
+= BlueXP backup and recovery for VMs documentation
 :hardbreaks:
 :nofooter:
 :icons: font

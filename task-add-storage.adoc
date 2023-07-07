@@ -1,0 +1,39 @@
+---
+permalink: task-add-storage.html
+sidebar: sidebar
+keywords: add, storage
+summary: 'Before you can backup or restore VMs, you must add “Amazon FSx for NetApp ONTAP” or “Amazon FSx for NetApp ONTAP SVM” as the storage system. Adding storage enables BlueXP backup and recovery for VMs to recognize and manage backup and restore operations in vCenter.'
+---
+= Add storage
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Before you can backup or restore VMs, you must add “Amazon FSx for NetApp ONTAP” or “Amazon FSx for NetApp ONTAP SVM” as the storage system. Adding storage enables BlueXP backup and recovery for VMs to recognize and manage backup and restore operations in vCenter.
+
+.Before you begin
+The ESXi server, BlueXP backup and recovery for VMs, and each vCenter must be synchronized to the same time. If you try to add storage but the time settings for your vCenters are not synchronized, the operation might fail with a Java certificate error.
+
+.About this task
+BlueXP backup and recovery for VMs perform backup and restore operations on directly connected storage VMs and on storage VMs in a storage cluster.
+
+* For vCenters in linked mode, you must separately add storage systems to each vCenter. 
+* Names for storage VMs must resolve to management LIFs.
++
+If you added etc host entries for storage VM names in BlueXP backup and recovery for VMs, you must verify that they are also resolvable from the virtual appliance.
++
+If you add a storage VM with a name that cannot resolve to the management LIF, then scheduled backup jobs fail because the plug-in is unable to discover any datastores or volumes on that storage VM. If this occurs, either add the storage VM to BlueXP backup and recovery for VMs and specify the management LIF or add a cluster that contains the storage VM and specify the cluster management LIF.
+
+* Storage authentication details are not shared between multiple instances of BlueXP backup and recovery for VMs or between Windows SnapCenter Server and BlueXP backup and recovery for VMs on vCenter.
+
+.Steps
+. In the left Navigator pane of the vSphere client, click *Storage Systems*.
+. On the Storage Systems page, click *Add*.
++
+image:vSphere client.png[]
++
+. In the *Add Storage System* wizard, enter the basic storage VM or cluster information.
+. Select the *Credentials* authentication method and log in as Amazon FSx administrator.
+. Click *Add*.
+
+If you added a storage cluster, all storage VMs in that cluster are automatically added. Automatically added storage VMs (sometimes called “implicit” storage VMs) are displayed on the cluster summary page with a hyphen (-) instead of a username. Usernames are displayed only for explicit storage entities.
