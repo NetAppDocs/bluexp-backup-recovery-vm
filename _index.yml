@@ -25,6 +25,5 @@ indexpage:
           url: task-back-up-resource-groups-on-demand.html
         - title: Restore Virtual Machines from Amazon FSx
           url: task-restore-virtual-machines-from-amazon-fsx.html
-    - title: Blogs & community
-      links:
+
       
