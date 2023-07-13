@@ -28,9 +28,6 @@ To correct this issue, configure the SnapMirror retention policy for the seconda
 . On the *Policies* page, click *Create* to start the wizard.
 image:vSphere client_policies.png[]
 . On the *New Backup Policy* page, select the VMC on AWS that will use the policy, and then enter the policy name and a description.
-** Linked mode
-+
-In linked mode, each vCenter has a separate virtual appliance. Therefore, you can use duplicate names across vCenters. However, you must create the policy in the same vCenter as the resource group.
 ** Unsupported characters
 +
 Do not use the following special characters in VM, datastore, cluster, policy, backup, or resource group names: % & * $ # @ ! \ / : * ? " < > - | ; ' , .

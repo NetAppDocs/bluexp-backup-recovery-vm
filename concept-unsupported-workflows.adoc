@@ -15,5 +15,5 @@ The following workflows are not supported in BlueXP backup and recovery for VMs 
 * Mount and unmount datastores
 * Restore guest files and folders 
 * Restore to Alternate Location
-* Add Storage System using "Certificate" Authentication Method 
+* Add storage system using "Certificate" authentication method 
 * Add NetApp ONTAP FlexGroup volumes 
