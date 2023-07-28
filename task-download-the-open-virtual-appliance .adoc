@@ -2,7 +2,7 @@
 permalink: task-download-the-open-virtual-appliance.html
 sidebar: sidebar
 keywords: download, open virtual appliance
-summary: 'Before installing the Open Virtual Appliance (OVA), add the certificate to the vCenter. The .tar file contains the OVA and Entrust Root and Intermediate certificates, the certificates can be found within the certificates folder. The OVA deployment is supported in VMware vCenter 8.0 and above.'
+summary: 'Before installing the Open Virtual Appliance (OVA), add the certificate to the vCenter. The .tar file contains the OVA and Intermediate certificates, which can be found within the certificates folder. The OVA deployment is supported in VMware vCenter 8.0 and above.'
 ---
 = Download the Open Virtual Appliance (OVA)
 :experimental:
@@ -10,9 +10,11 @@ summary: 'Before installing the Open Virtual Appliance (OVA), add the certificat
 :imagesdir: ../media/
 
 [.lead]
-Before installing the Open Virtual Appliance (OVA), add the certificate to the vCenter. The `.tar` file contains the OVA and Entrust Root and Intermediate certificates, the certificates can be found within the certificates folder. The OVA deployment is supported in VMware vCenter 8.0 and above.
+Before installing the Open Virtual Appliance (OVA), add the certificate to the vCenter. The `.tar` file contains the OVA and Intermediate certificates, which can be found within the certificates folder. The OVA deployment is supported in VMware vCenter 8.0 and above.
 
 If the OVA signed by the Entrust certificate is not trusted, you need to perform the following procedure to resolve the issue.
+
+NOTE: By default, the root certificate is available from VMware. You should install only intermediate certificates.
 
 .Steps
 . To download BlueXP backup and recovery for VMs OVA:
@@ -20,12 +22,11 @@ If the OVA signed by the Entrust certificate is not trusted, you need to perform
 * From the list of products, select *BlueXP backup and recovery for VMs*, then click the *Download Latest Release* button.
 * Download the BlueXP backup and recovery for VMs `.tar` file to any location.
 
-. Extract the contents of the tar file. The tar file contains the OVA and certs folder. The certs folder contains the Entrust Root and Intermediate certificates.
-. Log in with the vSphere Client credentials to VMC on AWS.
-. Navigate to menu:Administration[Certificates > Certificate Management].
+. Extract the contents of the tar file. The tar file contains the OVA and certs folder. The certs folder contains Intermediate certificates.
+. Navigate to *Administration > Certificates > Certificate Management*.
 . Next to *Trusted Root certificates*, click *Add*.
 * Go to the certs folder.
-* Select the Entrust Root and Intermediate certificates.
+* Select the Intermediate certificates.
 * Install each certificate one at a time.
 
 . The certificates are added to a panel under Trusted Root Certificates.
