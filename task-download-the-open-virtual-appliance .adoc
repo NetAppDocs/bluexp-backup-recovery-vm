@@ -2,32 +2,34 @@
 permalink: task-download-the-open-virtual-appliance.html
 sidebar: sidebar
 keywords: download, open virtual appliance
-summary: 'Before installing the Open Virtual Appliance (OVA), add the certificate to the vCenter. The .tar file contains the OVA and Intermediate certificates, which can be found within the certificates folder. The OVA deployment is supported in VMware vCenter 8.0 and above.'
+summary: 'Download the Open Virtual Appliance (OVA) in VMware vCenter 8.0 and above to deploy BlueXP backup and recovery for VMs.'
 ---
-= Download the Open Virtual Appliance (OVA)
+= Download the Open Virtual Appliance
 :experimental:
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Before installing the Open Virtual Appliance (OVA), add the certificate to the vCenter. The `.tar` file contains the OVA and Intermediate certificates, which can be found within the certificates folder. The OVA deployment is supported in VMware vCenter 8.0 and above.
+Download the Open Virtual Appliance (OVA) in VMware vCenter 8.0 and above to deploy BlueXP backup and recovery for VMs.
 
-If the OVA signed by the Entrust certificate is not trusted, you need to perform the following procedure to resolve the issue.
-
-NOTE: By default, the root certificate is available from VMware. You should install only intermediate certificates.
+.Before you begin
+If the OVA signed by the Entrust certificate is not trusted, ensure to install and add the intermediate certificates to the vCenter. 
 
 .Steps
 . To download BlueXP backup and recovery for VMs OVA:
-* Log in to the https://mysupport.netapp.com/products/index.html[NetApp Support Site^]
-* From the list of products, select *BlueXP backup and recovery for VMs*, then click the *Download Latest Release* button.
-* Download the BlueXP backup and recovery for VMs `.tar` file to any location.
+.. Log in to the https://mysupport.netapp.com/products/index.html[NetApp Support Site^]
+.. From the list of products, select *BlueXP backup and recovery for VMs*, then click the *Download Latest Release* button.
+.. Download the BlueXP backup and recovery for VMs `.tar` file to any location.
 
 . Extract the contents of the tar file. The tar file contains the OVA and certs folder. The certs folder contains Intermediate certificates.
-. Navigate to *Administration > Certificates > Certificate Management*.
+. In vSphere client, navigate to *Administration > Certificates > Certificate Management*.
 . Next to *Trusted Root certificates*, click *Add*.
-* Go to the certs folder.
-* Select the Intermediate certificates.
-* Install each certificate one at a time.
++
+NOTE: By default, the root certificate is installed.
+
+.. Go to the certs folder.
+.. Select the Intermediate certificates.
+.. Install each certificate one at a time.
 
 . The certificates are added to a panel under Trusted Root Certificates.
 
