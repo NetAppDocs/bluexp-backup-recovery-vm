@@ -25,5 +25,13 @@ indexpage:
           url: task-back-up-resource-groups-on-demand.html
         - title: Restore Virtual Machines from Amazon FSx
           url: task-restore-virtual-machines-from-amazon-fsx.html
+    - title: Demos & tutorials
+      links:
+        - title: Install BlueXP backup and recovery for VMs
+          url: https://www.youtube.com/watch?v=kCuKY0fBf5U
+        - title: Backup FSx for ONTAP datastores and VMs
+          url: https://www.youtube.com/watch?v=cLWOFm_3g3U
+        - title: Restore FSx for ONTAP datastores VMs and VMDKs
+          url: https://www.youtube.com/watch?v=RVLYP0lguxkM 
 
       
