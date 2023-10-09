@@ -26,7 +26,7 @@ The folder name should not contain the following special characters: $!@#%^&()_+
 +
 For example, if you want to perform backups from six different instances of VMC on AWS, then you must deploy six BlueXP backup and recovery for VMs instances on six hosts and each VMC on AWS must be paired with a unique instance of BlueXP backup and recovery for VMs.
 
-* You must log in to vmc.vmware.com on VMWare cloud and open the firewall ports to allow the compute gateway public IP to communicate over TCP 443 with the vCenter on the management network.
+* On the vmc.vmware.com console, open the firewall ports to allow the compute gateway public IP to communicate over TCP 443 with the vCenter on the management network.
 * On the AWS console, you must update the security group of the VPC where FSx for ONTAP is running to allow BlueXP backup and recovery for VMs access FSx for ONTAP.
 
 
