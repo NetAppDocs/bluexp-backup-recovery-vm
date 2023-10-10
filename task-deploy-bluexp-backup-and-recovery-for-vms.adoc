@@ -9,7 +9,7 @@ summary: 'To protect VMs, datastores, and application-consistent databases on vi
 :imagesdir: ../media/
 
 [.lead]
-To protect VMs, datastores, and application-consistent databases on virtualized machines, you must deploy BlueXP backup and recovery for VMs.
+To protect VMs and datastores on virtualized machines, you must deploy BlueXP backup and recovery for VMs.
 
 .Before you begin
 ++ ++
@@ -26,8 +26,7 @@ The OVA deployment is supported in VMware vCenter 8.0 and above.
 * You must have a certificate with valid Public and Private Key files. For more information, see articles under Storage Certificate Management section.
 * You must have logged out of and closed all browser sessions of vSphere client and deleted the browser cache to avoid any browser cache issue during the deployment of BlueXP backup and recovery for VMs.
 * You must have enabled Transport Layer Security (TLS) in vCenter. Refer to the VMware documentation.
-
-Deploy BlueXP backup and recovery for VMs in the same time zone as the vCenter. 
+* You must have deployed BlueXP backup and recovery for VMs in the same time zone as the vCenter. 
 
 .Steps
 . For VMware vCenter 7.0.3 and later versions, follow the steps in Download the Open Virtual Appliance (OVA) section to import the certificates to vCenter.
