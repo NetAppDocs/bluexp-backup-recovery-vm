@@ -35,6 +35,10 @@ Do not use the following special characters in VM, datastore, cluster, policy, b
 An underscore character (_) is allowed.
 image:New backup policy.png[]
 
+. Specify the frequency settings.
++
+The policy specifies the backup frequency only. The specific protection schedule for backing up is defined in the resource group. Therefore, two or more resource groups can share the same policy and backup frequency but have different backup schedules.
+. If you do not want the Snapshot to be tampered, enable *Snapshot Locking* and specify the locking period.
 . Specify the retention settings.
 +
 [IMPORTANT]
@@ -42,9 +46,6 @@ image:New backup policy.png[]
 You should set the retention count to 2 backups or higher if you plan to enable SnapVault replication. If you set the retention count to 1 backup to keep, the retention operation can fail. This is because the first Snapshot copy is the reference Snapshot copy for the SnapVault relationship until the newer Snapshot copy is replicated to the target.
 ====
 +
-. Specify the frequency settings.
-+
-The policy specifies the backup frequency only. The specific protection schedule for backing up is defined in the resource group. Therefore, two or more resource groups can share the same policy and backup frequency but have different backup schedules.
 . In the *Replication* fields, specify the type of replication to secondary storage, as shown in the following table:
 +
 [cols="50,50"*,options="header"]

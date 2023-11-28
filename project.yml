@@ -10,7 +10,11 @@ sidebar:
   - title: BlueXP backup and recovery for VMs docs
     url: /index.html
   - title: Release notes
-    url: /whats-new.html
+    entries: 
+      - title: What's new
+        url: /whats-new.html
+      - title: Known limitations
+        url: /reference-limitations.html
   - title: Get started
     entries: 
       - title: Learn about BlueXP backup and recovery for VMs
@@ -35,8 +39,26 @@ sidebar:
         url: /task-create-resource-groups.html
       - title: Back up resource groups on demand
         url: /task-back-up-resource-groups-on-demand.html 
+  - title: Mount and unmount datastores
+    entries:
+        - title: Mount datastores
+          url: /task-mount-datastores.html
+        - title: Unmount datastores
+          url: /task-unmount-datastores.html
+  - title: Attach and detach VMDKs 
+    entries:
+        - title: Attach VMDKs to a VM
+          url: /task-attach-vmdks-vm.html
+        - title: Detach a virtual disk
+          url: /task-detach-virtual-disks.html
   - title: Restore Virtual Machines from Amazon FSx
     url: /task-restore-virtual-machines-from-amazon-fsx.html
+  - title: REST APIs
+    entries:
+        - title: Overview
+          url: /concept-overview-rest-apis.html
+        - title: Access REST APIs 
+          url: /task-access-rest-apis.html
   - title: Knowledge and support
     entries:
       - title: Register for support

@@ -1,0 +1,22 @@
+---
+permalink: task-unmount-datastores.html
+sidebar: sidebar
+keywords: mount, datastores
+summary: 'Unmounting a datastore removes host access to storage.'
+---
+= Unmount datastores
+:experimental:
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+You can unmount a backup when you no longer need to access the files in the datastore.
+
+.Steps
+
+. In the left Navigator pane of BlueXP backup and recovery for VMs, click *Backups*.
+. Select a mounted datastore and click *Unmount*.
+
+NOTE: Make sure that you select the correct datastore to unmount. Otherwise, you might cause an impact on production work.
+
+. In the *Unmount Backup* dialog box, select a datastore and click *Unmount*.

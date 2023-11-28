@@ -1,0 +1,15 @@
+---
+permalink: reference-limitations.html
+sidebar: sidebar
+keywords: limitations
+summary: "You should be aware of the limitations before using BlueXP backup and recovery for VMs."
+---
+= Known limitations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Known limitations identify functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+
+== BlueXP backup and recovery for VMs does not support Automatic daily backups   
+Amazon FSx for ONTAP’s Automatic daily backups is not supported  

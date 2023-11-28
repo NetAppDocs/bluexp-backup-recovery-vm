@@ -1,0 +1,34 @@
+---
+permalink: task-mount-datastores.html
+sidebar: sidebar
+keywords: mount, datastores
+summary: 'Mounting a datastore gives a host access to storage.'
+---
+= Mount datastores
+:experimental:
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+You can mount a datastore from a backup if you want to access files in the backup. You can mount only 4 datastores in a cluster.
+
+.Before you begin
+
+* Ensure that the the organization ID and API token are enabled.
+* Ensure alternate ESXi host can connect to the storage
++
+If you want to mount to an alternate ESXi host, you must ensure that the alternate ESXi host can connect to the storage and has the following:
+*Same UID and GID as that of the original host* and same virtual appliance for BlueXP backup and recovery for VMs version as that of original host.
+
+.Steps
+
+. In the left Navigator pane of BlueXP backup and recovery for VMs, click *Backups*.
+. Select the datastore and click *Mount*.
+. In the *Mount Backup* dialof box, select a backup and a backup location (primary or secondary), and then click *Mount*.
+. Optional: To verify that the datastore is mounted, perform the following:
+.. Click *Menu* in the toolbar, and then select *Storage* from the drop-down list.
+.. The left Navigator pane displays the datastore you mounted at the top of the list.
++
+If you perform an attach or mount operation on a SnapVault destination volume that is protected by SnapVault schedules and is running ONTAP 8.3, you might see an extra Snapshot copy listed in the attach or mount dialog screen. This occurs because the attach or mount operation clones the SnapVault destination volume and ONTAP updates the volume by creating a new Snapshot copy.
++
+To prevent new Snapshot copies from being created when you clone the volume, turn off the ONTAP schedule for the SnapVault volume. Previously existing Snapshot copies are not deleted.

@@ -41,7 +41,7 @@ Even if a VMware consistency snapshot for a Virtual Machine fails, the Virtual M
 
 .Steps
 . In the VMware vSphere web client GUI, click *Menu* in the toolbar, click *Inventory* and then select *Virtual Machines and Templates*.
-. In the left Navigator pane, right-click a *Virtual Machine*, then select *NetApp Cloud Backup* in the drop-down list, and then select *Restore* to start the wizard.
+. In the left Navigator pane, right-click a *Virtual Machine*, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Restore* to start the wizard.
 .  In the *Restore* wizard, on the *Select Backup* page, select the backup Snapshot copy that you want to restore.
 +
 You can search for a specific backup name or a partial backup name, or you can filter the backup list by clicking the filter icon and selecting a date and time range, selecting whether you want backups that contain VMware Snapshots, whether you want mounted backups, and the location. Click *OK* to return to the wizard.
