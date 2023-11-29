@@ -26,18 +26,18 @@ To correct this issue, configure the SnapMirror retention policy for the seconda
 .Steps
 . In the left Navigator pane of BlueXP backup and recovery for VMs, click *Policies*.
 . On the *Policies* page, click *Create* to start the wizard.
-
++
 image:vSphere client_policies.png[]
-
++
 . On the *New Backup Policy* page, select the VMC on AWS that will use the policy, and then enter the policy name and a description.
 ** Unsupported characters
 +
 Do not use the following special characters in VM, datastore, cluster, policy, backup, or resource group names: % & * $ # @ ! \ / : * ? " < > - | ; ' , .
 +
 An underscore character (_) is allowed.
-
++
 image:New backup policy.png[]
-
++
 . Specify the frequency settings.
 +
 The policy specifies the backup frequency only. The specific protection schedule for backing up is defined in the resource group. Therefore, two or more resource groups can share the same policy and backup frequency but have different backup schedules.

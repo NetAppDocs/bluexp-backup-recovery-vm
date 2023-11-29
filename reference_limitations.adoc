@@ -11,5 +11,5 @@ summary: "You should be aware of the limitations before using BlueXP backup and 
 [.lead]
 Known limitations identify functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
-== BlueXP backup and recovery for VMs does not support Automatic daily backups   
-Amazon FSx for ONTAP’s Automatic daily backups is not supported  
+* BlueXP backup and recovery for VMs does not support automatic daily backups for ONTAP.
+* The maximum limit of datastores that can be mounted are four. 

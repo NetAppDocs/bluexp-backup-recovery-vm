@@ -11,6 +11,17 @@ summary: 'When you restore a Virtual Machine, you can overwrite the existing con
 [.lead]
 When you restore a Virtual Machine, you can overwrite the existing content with the backup copy that you select, or you can make a copy of the Virtual Machine.
 
+You can restore VMs to the following locations:
+
+* Restore to original location
+** To the original datastore mounted on the original ESXi host (this overwrites the original VM)
+
+* Restore to alternate location
+** To a different datastore mounted on the original ESXi host
+** To the original datastore mounted on a different ESXi host that is managed by the same vCenter
+** To a different datastore mounted on a different ESXi host that is managed by the same vCenter
+** To a different datastore mounted on a different ESXi host that is managed by a different vCenter in linked mode
+
 .Before you begin
 * A backup must exist.
 +
@@ -45,7 +56,9 @@ Even if a VMware consistency snapshot for a Virtual Machine fails, the Virtual M
 .  In the *Restore* wizard, on the *Select Backup* page, select the backup Snapshot copy that you want to restore.
 +
 You can search for a specific backup name or a partial backup name, or you can filter the backup list by clicking the filter icon and selecting a date and time range, selecting whether you want backups that contain VMware Snapshots, whether you want mounted backups, and the location. Click *OK* to return to the wizard.
-. On the *Select Scope* page, select *Entire Virtual Machine* in the *Restore scope* field, then select the restore location, and then enter the destination ESXi information where the backup should be mounted.
+. On the *Select Scope* page, select *Entire Virtual Machine* in the *Restore scope* field, then select the restore location, and then enter the destination information where the backup should be mounted.
++
+In the VM name field, if the same VM name exists, then the new VM name format is '<vm_name>_<timestamp>'.
 +
 When restoring partial backups, the restore operation skips the *Select Scope* page.
 . Enable *Restart VM* checkbox if you want the Virtual Machine to be powered on after the restore operation.
