@@ -15,13 +15,14 @@ After you have attached a virtual disk to restore individual files, you can deta
 .Steps
 
 
+. In the VMware vSphere client toolbar, click *Storage*, and then select the storage system from the drop-down list.
 . In the left Navigator pane, right-click a *Virtual Machine*, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Detach Virtual Disk(s)*.
-. In the *Detach Virtual Disk* dialog box, select one or more disks you want to detach, then select the *Detach the selected disk(s)* checkbox, and click*Detach*.
+. In the *Detach Virtual Disk* dialog box, select one or more disks you want to detach, then select the *Detach the selected disk(s)* checkbox, and click *Detach*.
 . Optional: Monitor the operation progress in the *Recent Tasks* section.
 +
 Refresh the screen to display updated information.
 
-. Verify that the virtual disk is attached by performing the following:
+. Verify that the virtual disk is detached by performing the following:
 
 .. Click *Menu* in the toolbar, and then select *VMs and Templates* from the drop-down list.
 
@@ -31,5 +32,4 @@ Refresh the screen to display updated information.
 +
 The Edit Settings page lists the disks on the VM. You can expand the details for each hard disk to see the list of attached virtual disks.
 
-*Result*
-You can access the attached disks from the host operating system and then retrieve the needed information from the disks.
+

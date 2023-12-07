@@ -53,12 +53,8 @@ sidebar:
           url: /task-detach-virtual-disks.html
   - title: Restore Virtual Machines from Amazon FSx
     url: /task-restore-virtual-machines-from-amazon-fsx.html
-  - title: REST APIs
-    entries:
-        - title: Overview
-          url: /concept-overview-rest-apis.html
-        - title: Access REST APIs 
-          url: /task-access-rest-apis.html
+  - title: Access REST APIs 
+    url: /task-access-rest-apis.html    
   - title: Knowledge and support
     entries:
       - title: Register for support

@@ -12,14 +12,14 @@ summary: 'Perform these steps to access the REST APIs.'
 REST APIs are exposed through the Swagger web page. You can access the Swagger web page to display the BlueXP backup and recovery for VMs REST APIs. 
 
 .Before you begin
-For BlueXP backup and recovery for VMs REST APIs, you must know either the IP address or the host name of the SnapCenter VMware plug-in.
+For BlueXP backup and recovery for VMs REST APIs, you must know either the IP address or the host name of the BlueXP backup and recovery for VMs appliance.
 
 NOTE: The plug-in only supports REST APIs for the purpose of integrating with third party applications and does not support PowerShell cmdlets or a CLI.
 
 .Steps
 . From a browser, enter the URL to access the plug-in Swagger web page:
 +
-https://<SCV_IP>/api/swagger-ui/index.html[]
+https://<OVA_IP>/api/swagger-ui/index.html[]
 +
 NOTE: Do not use the following characters in the REST API URL: +, . , %, and &.
 +
@@ -27,9 +27,7 @@ NOTE: Do not use the following characters in the REST API URL: +, . , %, and &.
 +
 Access the SnapCenter VMware plug-in REST APIs:
 +
-https://<SCV_IP>/api/swagger-ui/index.html
-+
-https://OVAhost:8144/api/swagger-ui/index.html
+https://<OVA_IP>/api/swagger-ui/index.html
 +
 Log in use the vCenter authentication mechanism to generate the token.
 

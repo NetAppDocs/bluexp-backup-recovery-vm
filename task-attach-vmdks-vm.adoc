@@ -10,21 +10,27 @@ summary: 'Attach one ore more VMDKs to the VM.'
 :imagesdir: ./media/
 
 [.lead]
-You can attach one or more VMDKs from a backup to the parent VM, or to an alternate VM on the same ESXi host, or to an alternate VM on an alternate ESXi host managed by the same vCenter or a different vCenter in linked mode. VMs in traditional datastores and in vVol datastores are supported.
+You can attach one or more VMDKs from a backup to the parent VM, or to an alternate VM on the same ESXi host, or to an alternate VM on an alternate ESXi host managed by the same vCenter or a different vCenter in linked mode. VMs in traditional datastores are supported.
 
 This makes it easier to restore one or more individual files from a drive instead of restoring the entire drive. You can detach the VMDK after you have restored or accessed the files you need.
 
 .About this task
 
 You have the following attach options:
+
 * You can attach virtual disks from a primary or a secondary backup.
 * You can attach virtual disks to the parent VM (the same VM that the virtual disk was originally associated with) or to an alternate VM on the same ESXi host.
 
 The following limitations apply to attaching virtual disks:
 
 * Attach and detach operations are not supported for Virtual Machine Templates.
+* When more than 15 VMDKs are attached to an iSCSI controller, the virtual machine for SnapCenter Plug-in for VMware vSphere cannot locate VMDK unit numbers higher than 15 because of VMware restrictions.
++
+In this case, add the SCSi controllers manually and try the attach operation again.
+* Attach and restore operations connect VMDKs using the default SCSi controller. VMDKs that are attached to a VM with a NVME controller are backed up, but for attach and restore operations they are connected back using a SCSi controller.
 
 .Steps
+. In the VMware vSphere client toolbar, click *Storage*, and then select the storage system from the drop-down list.
 . In the left Navigator pane, right-click a *Virtual Machine*, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Attach Virtual Disk(s)*.
 . On the Attach Virtual Disk window, in the *Backup section*, select a backup.
 +
@@ -52,6 +58,6 @@ Refresh the screen to display updated information.
 +
 The Edit Settings page lists the disks on the VM. You can expand the details for each hard disk to see the list of attached virtual disks.
 
-*Result*
+*Result*:
 You can access the attached disks from the host operating system and then retrieve the needed information from the disks.
 
