@@ -21,7 +21,7 @@ If you want to mount to an alternate ESXi host, you must ensure that the alterna
 
 .Steps
 
-. In the VMware vSphere client toolbar, click *Host and Clusters*, and then select the storage system from the drop-down list.
+. In the VMware vSphere client toolbar, click *Host and Clusters*, and then select the storage system.
 . In the left Navigator pane, click *Backups*.
 . Select the unmounted datastore and click *Mount*.
 . In the *Mount Backup* dialog box, select a backup and a backup location (primary or secondary), and then click *Mount*.

@@ -14,7 +14,7 @@ You can unmount a backup when you no longer need to access the files in the data
 
 .Steps
 
-. In the VMware vSphere client toolbar, click *Storage*, and then select the storage system from the drop-down list.
+. In the VMware vSphere client toolbar, click *Storage*, and then select the storage system.
 . In the left Navigator pane, click *Backups*.
 . Select a mounted datastore and click *Unmount*.
 +
