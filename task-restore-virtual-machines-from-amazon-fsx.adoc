@@ -51,7 +51,7 @@ You cannot restore a datastore, but you can restore any Virtual Machine in the d
 Even if a VMware consistency snapshot for a Virtual Machine fails, the Virtual Machine is nevertheless backed up. You can view the entities contained in the backup copy in the Restore wizard and use it for restore operations.
 
 .Steps
-. In the VMware vSphere client toolbar, click *Host and Clusters*, and then select the storage system from the drop-down list.
+. In the VMware vSphere client toolbar, click *Host and Clusters*, and then select the storage system.
 . In the left Navigator pane, right-click a *Virtual Machine*, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Restore* to start the wizard.
 .  In the *Restore* wizard, on the *Select Backup* page, select the backup Snapshot copy that you want to restore.
 +
