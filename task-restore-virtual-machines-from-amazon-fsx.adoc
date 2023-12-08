@@ -69,7 +69,7 @@ When restoring partial backups, the restore operation skips the *Select Scope* p
 .After you finish
 * Add restored Virtual Machines to resource groups.
 +
-Although the Virtual Machines are restored, they are not automatically added to their former resource groups. Therefore, you must manually add the restored Virtual Machines to the appropriate resource groups.
+Ensure that the newly restored VM is protected. If it is not, protect it by manually adding the restored VM to the appropriate resource groups.
 
 
 

@@ -14,7 +14,7 @@ You can mount a datastore from a backup if you want to access files in the backu
 
 .Before you begin
 
-* Ensure to copy the organization ID and API token from the VMC portal and add them to the VMware Cloud Services.
+* Ensure to copy the organization ID and API token from the VMC portal and add them to the VMware Cloud Services settings.
 * Ensure alternate ESXi host can connect to the storage
 +
 If you want to mount to an alternate ESXi host, you must ensure that the alternate ESXi host can connect to the storage and has the same UID and GID as that of the original host.
