@@ -14,4 +14,3 @@ Known limitations identify functions that are not supported by this release of t
 * BlueXP backup and recovery for VMs does not support Amazon FSx for ONTAP’s automatic daily backups.
 * The maximum limit of datastores that can be mounted are four. 
 * In ONTAP 9.13.1 and below versions, BlueXP backup and recovery for VMs shows secondary location twice if snapshot locking is enabled. 
-* On a SnapMirror destination, if both storage efficiency and snapshot locking features have been enabled, then when a specific source snapshot is explicitly chosen for replication, it results in an additional snapshot with the prefix "snapmirrorPreSE" being created on the destination. This snapshot is locked for the configured duration but the replicated snapshot is not locked.
