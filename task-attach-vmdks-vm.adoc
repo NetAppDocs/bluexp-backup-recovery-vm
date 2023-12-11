@@ -30,7 +30,7 @@ In this case, add the SCSi controllers manually and try the attach operation aga
 * Attach and restore operations connect VMDKs using the default SCSi controller. VMDKs that are attached to a VM with a NVME controller are backed up, but for attach and restore operations they are connected back using a SCSi controller.
 
 .Steps
-. In the VMware vSphere client toolbar, navigate to image:menu_icon.png[] > *Inventory* > *Hosts and Clusters*.
+. In the VMware vSphere client, navigate to image:menu_icon.png[] > *Inventory* > *Hosts and Clusters*.
 . In the left navigator pane, right-click a *Virtual Machine*, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Attach Virtual Disk(s)*.
 . On the Attach Virtual Disk window, in the *Backup section*, select a backup.
 +

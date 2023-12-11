@@ -14,7 +14,7 @@ You can unmount a backup when you no longer need to access the files in the data
 
 .Steps
 
-. In the VMware vSphere client toolbar, navigate to image:menu_icon.png[] > *Inventory* > *Storage*.
+. In the VMware vSphere client, navigate to image:menu_icon.png[] > *Inventory* > *Storage*.
 . In the left navigator pane, right-click a datastore, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Unmount* in the secondary drop-down list.
 +
 NOTE: Make sure that you select the correct datastore to unmount. Otherwise, you might cause an impact on production work.
