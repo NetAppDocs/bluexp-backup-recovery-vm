@@ -21,10 +21,9 @@ If you want to mount to an alternate ESXi host, you must ensure that the alterna
 
 .Steps
 
-. In the VMware vSphere client toolbar, click *Host and Clusters*, and then select the storage system.
-. In the left Navigator pane, click *Backups*.
-. Select the unmounted datastore and click *Mount*.
-. In the *Mount Backup* dialog box, select a backup and a backup location (primary or secondary), and then click *Mount*.
+. In the VMware vSphere client toolbar, navigate to image:menu_icon.png[] > *Inventory* > *Storage*.
+. In the left navigator pane, right-click a datastore, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Mount Backup* in the secondary drop-down list.
+. On the *Mount Datastore* page, select a backup and a backup location (primary or secondary), and then click *Mount*.
 . Optional: To verify that the datastore is mounted, in the VMware vSphere client toolbar, click *BlueXP backup and recovery for VMs*.
 +
 The datastore you mounted is displayed in the *Recent Job Activities* tile of the dashboard.

@@ -10,7 +10,7 @@ summary: 'Attach one ore more VMDKs to the VM.'
 :imagesdir: ./media/
 
 [.lead]
-You can attach one or more VMDKs from a backup to the parent VM, or to an alternate VM on the same ESXi host, or to an alternate VM on an alternate ESXi host managed by the same vCenter or a different vCenter in linked mode. VMs in traditional datastores are supported.
+You can attach one or more VMDKs from a backup to the parent VM, or to an alternate VM on the same ESXi host, or to an alternate VM on an alternate ESXi host managed by the same vCenter or a different vCenter in linked mode. 
 
 This makes it easier to restore one or more individual files from a drive instead of restoring the entire drive. You can detach the VMDK after you have restored or accessed the files you need.
 
@@ -30,8 +30,8 @@ In this case, add the SCSi controllers manually and try the attach operation aga
 * Attach and restore operations connect VMDKs using the default SCSi controller. VMDKs that are attached to a VM with a NVME controller are backed up, but for attach and restore operations they are connected back using a SCSi controller.
 
 .Steps
-. In the VMware vSphere client toolbar, click *Storage*, and then select the storage system.
-. In the left Navigator pane, right-click a *Virtual Machine*, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Attach Virtual Disk(s)*.
+. In the VMware vSphere client toolbar, navigate to image:menu_icon.png[] > *Inventory* > *Hosts and Clusters*.
+. In the left navigator pane, right-click a *Virtual Machine*, then select *BlueXP backup and recovery for VMs* in the drop-down list, and then select *Attach Virtual Disk(s)*.
 . On the Attach Virtual Disk window, in the *Backup section*, select a backup.
 +
 You can filter the backup list by selecting the filter icon and choosing a date and time range, selecting whether you want backups that contain VMware Snapshot copies, whether you want mounted backups, and the location. Click OK.

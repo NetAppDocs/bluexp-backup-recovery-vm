@@ -9,7 +9,7 @@ summary: "BlueXP backup and recovery for VMs is a standalone virtual appliance (
 :imagesdir: ../media/
 
 [.lead]
-BlueXP backup and recovery for VMs is a standalone virtual appliance (Open Virtual Appliance format) that provides data protection services for VMs and datastores on VMware Cloud on AWS and Amazon FSx for NetApp ONTAP. You can use BlueXP backup and recovery for VMs to back up datastores and restore virtual machines to their original location.
+BlueXP backup and recovery for VMs is a standalone virtual appliance (Open Virtual Appliance format) that provides data protection services for VMs and datastores on VMware Cloud on AWS and Amazon FSx for NetApp ONTAP. 
 
 * You can backup only NFS type datastores on Amazon FSx.
 * You should be running ONTAP 9.10 or later to backup NFS datastores. 
