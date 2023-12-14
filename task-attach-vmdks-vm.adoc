@@ -24,7 +24,7 @@ You have the following attach options:
 The following limitations apply to attaching virtual disks:
 
 * Attach and detach operations are not supported for Virtual Machine Templates.
-* When more than 15 VMDKs are attached to an iSCSI controller, the virtual machine for SnapCenter Plug-in for VMware vSphere cannot locate VMDK unit numbers higher than 15 because of VMware restrictions.
+* When more than 15 VMDKs are attached to an iSCSI controller, the virtual machine for BlueXP backup and recovery for VMs cannot locate VMDK unit numbers higher than 15 because of VMware restrictions.
 +
 In this case, add the SCSi controllers manually and try the attach operation again.
 * Attach and restore operations connect VMDKs using the default SCSi controller. VMDKs that are attached to a VM with a NVME controller are backed up, but for attach and restore operations they are connected back using a SCSi controller.

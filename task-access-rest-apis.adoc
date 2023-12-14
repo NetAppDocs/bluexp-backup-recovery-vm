@@ -25,7 +25,7 @@ NOTE: Do not use the following characters in the REST API URL: +, . , %, and &.
 +
 *Example*
 +
-Access the SnapCenter VMware plug-in REST APIs:
+Access BlueXP backup and recovery for VMs REST APIs:
 +
 https://<OVA_IP>/api/swagger-ui/index.html
 +
