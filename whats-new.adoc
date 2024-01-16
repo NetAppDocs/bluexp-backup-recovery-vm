@@ -11,7 +11,7 @@ summary: 'Learn what’s new with BlueXP backup and recovery for VMs.'
 [.lead]
 Learn what’s new in BlueXP backup and recovery for VMs.
 
-== 11 January 2024
+== 18 January 2024
 
 === Enhancements to BlueXP backup and recovery for VMs
 
