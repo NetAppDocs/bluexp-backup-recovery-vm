@@ -11,6 +11,17 @@ summary: 'Learn what’s new with BlueXP backup and recovery for VMs.'
 [.lead]
 Learn what’s new in BlueXP backup and recovery for VMs.
 
+== 18 January 2024
+
+=== Enhancements to BlueXP backup and recovery for VMs
+
+The following are the features that are supported  in BlueXP backup and recovery for VMs 1.1:
+
+* Mount and unmount datastores 
+* Attach and detach VMDKs
+* Restore virtual machines to alternate location
+* Enable Snapshot Locking to ensure Snapshot copies are not tampered until a specified time.
+
 == 13 July 2023
 
 === BlueXP backup and recovery for VMs 1.0 is now GA
@@ -19,3 +30,5 @@ You can protect data on your virtual machines by using BlueXP backup and recover
 This solution is specifically for Virtual Machines and Datastores on VMware Cloud on AWS and Amazon FSx for NetApp ONTAP.
 
 link:concept-bluexp-backup-and-recovery-for-virtual-machines-on-amazon-fsx.html[BlueXP backup and recovery for virtual machines on Amazon FSx]
+
+
